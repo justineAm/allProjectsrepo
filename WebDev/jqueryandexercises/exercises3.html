@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 3</title>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+    
+  <style>
+    * { font: 17px Calibri; }
+    input {
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 15%;
+    }
+  </style>
+</head>
+
+<body>
+    <br><br>
+    <h3>Input date in this format DD/MM/YY</h3>
+    <div>
+        
+        Input Date: <input type='text' id='date' placeholder='e.g March 6, 2021' /><br><br>
+        <button>Check</button>
+        <p>Display Weekdays or Weekend :<input type="text" id="convertion"></input></p>
+
+    </div>
+</body>
+            
+<script>
+    $('button').click(function(){
+        dateValue = new Date($('#date').val());
+        // ndxDate = date.indexOf(' ')
+        // validateTor = parseInt(date.slice(ndxDate+1,ndxDate+3));
+        // if(validateTor%6==0||validateTor%7==0 ){
+        //     $('#convertion').val("Weekend")
+        // }else{
+        //     $('#convertion').val("Weekdays")
+        // }
+        date = dateValue.getDay();
+        if(date==6 || date ==0){
+            $('#convertion').val("Weekend")
+        }else{
+            $('#convertion').val("Weekdays")   
+        }
+      
+        
+    })
+	
+
+</script>
+</html>

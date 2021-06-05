@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            text-align: center;
+        }
+        img{
+            width: 20%;
+            height: 20%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    
+<img id="profilePic" src="me.jpg"><br>
+<h4 id ="profileDescribe" style="display: none;">
+    I am justine!<br> I am created in image and likeness of GOD!
+</h4>
+<h3> My friends say that I am Serious type person!!</h3>
+
+<div class="onmouseClick">
+    <img class="socialMedia" data-link="https://www.youtube.com/watch?v=o_nxIQTM_B0" src="dave.jpg">
+   
+    <p >-- Justine is not serious. "Yes He is!!" - Dave Choy</p>
+    <button class="btn btn-primary" id="resizePic">Click to resize</button><br>
+</div>
+<br>
+<div class="onmouseClick">
+    <img class="socialMedia1" id="SocialMedia" data-link = "https://www.linkedin.com/in/guian-carlo-8042081a2/"src="guian.png">
+  
+    <p >-- Justine is serious. "Yes He is!!" -Guian Victor Magtanggol</p>
+    <button class="btn btn-primary" id="resizePic1">Click to resize</button><br>
+</div>
+
+<script>
+    $("#profilePic").mouseenter(function(){
+        $("#profileDescribe").fadeToggle();
+
+    })
+    $("#profilePic").mouseleave(function(){
+        $("#profileDescribe").fadeToggle();
+
+    })
+    $("#profilePic").click(function(){
+        $(".onmouseClick").toggle();
+    })
+    $(".socialMedia").dblclick(function(){
+        window.location.href = $(this).data("link")
+    })
+    $("#SocialMedia").dblclick(function(){
+        window.location.href = $(this).data("link")
+    })
+    $("#resizePic").click(function(){
+        $(".socialMedia").animate({
+            height: '10%',
+            width: '10%'
+        })
+    })
+    $("#resizePic1").click(function(){
+        $(".socialMedia1").animate({
+            height: '10%',
+            width: '10%'
+        })
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <Title>Exercise 1</Title>
+    <style>
+        * { font: 17px Calibri; }
+        input {
+          padding: 7px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 95%;
+        }
+      </style>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+    <br><br>
+    <h3>Number Convertion System </h3>
+    <div>
+        Input Number: <input type='text' id='dicemal' placeholder='input number' /><br><br>
+        choose base: <input type='text' id='binary' placeholder='10 or 2' /><br><br>
+        <button >Convert</button>
+        <p>Display :<input type="text" id="converted"></input></p>
+
+    </div>
+    <script>
+        $('button').click(function(){
+            num = $('#dicemal').val();
+            num1 = $('#binary').val();
+            
+            switch(num1){
+                case '10':
+                    $('#converted').val(num.toString(2))
+                   
+                    break;
+                case '2':
+                    $('#converted').val(parseInt(num,2))
+            }
+            
+        })
+
+    </script>
+</body>
+</html>

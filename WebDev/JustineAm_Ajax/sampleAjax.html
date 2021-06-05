@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Information</title>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+  <style>
+    table {
+      margin: 0 auto;
+      font-size: large;
+      border: 1px solid black;
+    }
+
+    h1 {
+      text-align: center;
+      color: rgb(70, 159, 243);
+      font-size: xx-large;
+      font-family: 'Gill Sans',
+        'Gill Sans MT', ' Calibri',
+        'Trebuchet MS', 'sans-serif';
+    }
+    p{
+      font-size: large;
+    }
+
+    td {
+      background-color: rgb(70, 159, 243);
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      font-weight: bold;
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    td {
+      font-weight: lighter;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#table tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+</head>
+
+<body>
+  <section>
+    <br><br><br>
+    <h1>Batch 2021 Class Information</h1>
+    <center>
+    <p>Type something in the input field to search the table for first names, last names:</p>  <br><br>
+    <input id="myInput" type="text" placeholder="Search.."><br><br><br><br>
+    <button id="btn" class="btn btn-primary">Click to load</button><br><br>
+  </center>
+    <!-- TABLE CONSTRUCTION-->
+    <table id='table'>
+      <!-- HEADING FORMATION -->
+      <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Birth Date</th>
+        <th>Gender</th>
+      </tr>
+
+      <script>
+        $(document).ready(function () {
+          $("#btn").click(function(){
+           
+          $.getJSON("main.json",
+            function (data) {
+              var student = '';
+              // ITERATING THROUGH OBJECTS 
+              $.each(data, function (key, value) {
+                student += '<tr>';
+                student += '<td>' +
+                  value.LastName + '</td>';
+
+                student += '<td>' +
+                  value.FirstName + '</td>';
+
+                student += '<td>' +
+                  value.BirthDate + '</td>';
+
+                student += '<td>' +
+                  value.Gender+ '</td>';
+
+                student += '</tr>';
+              });
+
+              //INSERTING ROWS INTO TABLE 
+              $('#table').append(student);
+            });
+          })
+          
+        }); 
+      </script>
+  </section>
+</body>
+
+</html>
+

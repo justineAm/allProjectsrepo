@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2</title>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+    
+  <style>
+    * { font: 17px Calibri; }
+    input {
+      padding: 7px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 95%;
+    }
+  </style>
+</head>
+
+<body>
+    <br><br>
+    <h3>Input date in this format DD/MM/YY</h3>
+    <div>
+        Date: <input type='text' id='tbDate' placeholder='03/08/21' /><br><br>
+        <button>Convert</button>
+        <p>Display Month :<input type="text" id="convertion"></input></p>
+
+    </div>
+</body>
+            
+<script>
+    $('button').click(function(){
+        date = $('#tbDate').val();
+        dateNdx = date.indexOf('/');
+        datemonth = parseInt(date.slice(dateNdx+1,dateNdx+3));
+        switch(datemonth){
+            case 1:
+                $('#convertion').val("January")
+                break;
+            case 2:
+                $('#convertion').val("February")
+                break;
+            case 3:
+                $('#convertion').val("March")
+                break;
+            case 4:
+                $('#convertion').val("April")
+                break;
+            case 5:
+                $('#convertion').val("May")
+                break;
+            case 6:
+                $('#convertion').val("June")
+                break;
+            case 7:
+                $('#convertion').val("July")
+                break;
+            case 8:
+                $('#convertion').val("August")
+                break;
+            case 9:
+                $('#convertion').val("September")
+                break;
+            case 10:
+                $('#convertion').val("October")
+                break;
+            case 11:
+                $('#convertion').val("November")
+                break;
+            case 12:
+                $('#convertion').val("December")
+                break;
+            default:
+                $('#convertion').val("Invalid Month")
+        }
+    })
+	
+
+</script>
+</html>

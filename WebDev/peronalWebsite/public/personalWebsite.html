@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<title>My AutoBiography</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="../src/css/peronalWebsite.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+
+
+</style>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-button">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>COMMENTS</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    </div>
+  </div>
+
+  <!-- First Parallax Image with Logo Text -->
+  <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle" style="white-space:nowrap;">
+      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span
+          class="w3-hide-small">PERONAL</span>INFO</span>
+    </div>
+  </div>
+
+  <!-- Container (About Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT ME</h3>
+    <div class="w3-row">
+      <div class="w3-col m6 w3-center w3-padding-large">
+        <p><b><i class="fa fa-user w3-margin-right"></i>Justine Ambrad</b></p><br>
+        <img id="imgFade" src="..//src/img/me2.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+          alt="Photo of Me" width="500" height="333">
+      </div>
+      <br>
+
+      <!-- Hide this text on small devices -->
+      <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p id="textFade">
+          Welcome  Visitor. I am Justine Ambrad. I am 20 years of age. I live in the little baguio of Cebu Tabon, Dalaguete, Cebu. 
+          I love playing basketball, watching movies especially inspiring and love story, I love listening to music especilly country songs and mellow rocks. 
+          
+        </p>
+      </div>
+    </div>
+    <br><br>
+    <p class="w3-large w3-center w3-padding-16">My Friends tell me that I am good at:</p><br>
+    <p class="w3-wide"></i>Dave Lynderx Millan says:</p><br>
+    <div class="w3-dark-grey">
+      <div class="w3-container w3-padding-small w3-light-green w3-center" style="width:90%"> Macho Gay 90%</div>
+    </div>
+    <p class="w3-wide"></i>James Llyod Belda says:</p><br>
+    <div class="w3-dark-grey">
+      <div class="w3-container w3-padding-small w3-light-green w3-center" style="width:85%"> Basketball 85%</div>
+    </div>
+    <p class="w3-wide"></i>Guian Victor Amancio says:</p><br>
+    <div class="w3-dark-grey">
+      <div class="w3-container w3-padding-small w3-light-green w3-center" style="width:75%"> Singing 75%</div>
+    </div>
+  </div>
+
+  <div class="w3-row w3-center w3-blue w3-padding-16">
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge"></span><br>
+      Partners
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">55+</span><br>
+      Projects Done
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">89+</span><br>
+      Happy Clients
+    </div>
+    <div class="w3-quarter w3-section">
+      <span class="w3-xlarge">150+</span><br>
+      Meetings
+    </div>
+  </div>
+
+
+
+  <!-- Container (Portfolio Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="portfolio" style="margin-top:-10px">
+    <h3 class="w3-center">MY Friends </h3>
+    <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them
+        bigger</em></p><br>
+
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+
+    <div class="w3-row-padding w3-center">
+      <div class="card-group" style="height: 60%;">
+        <div class="card">
+          <img class="socialMedia"src="..//src/img/dave.jpg" data-link="https://www.linkedin.com/in/dave-lyndrex-millan-a269541a4/"
+            style="width:100%;height:40%;" onclick="onClick(this)"
+            class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="The Lover boy">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="socialMedia"src="..//src/img/guian.png" data-link="https://www.linkedin.com/in/guian-carlo-8042081a2/"
+            style="width:100%;height: 40%;" onclick="onClick(this)"
+            class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Mr. PaCute">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+
+        </div>
+        <div class="card">
+          <img class="socialMedia"src="../src/img/james.jpg" data-link="https://www.facebook.com"
+            style="width:100%;height: 40%;" onclick="onClick(this)"
+            class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="The High Blood">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  
+
+
+  <!-- Container (Contact Section) -->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+    <div class="w3-row w3-padding-32 w3-section">
+      <div class="w3-col m4 w3-container">
+        <img src="../src/img/mywork.jpg" class="w3-image w3-round" style="width:100%">
+      </div>
+      <div class="w3-col m8 w3-panel">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Talamban, Cebu City<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone:09462859427<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+          Email:jepoyambrad8@mail.com<br>
+        </div>
+        <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-right w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>
+      Made by:
+      <a href="https://www.linkedin.com/in/jepoy-obiedo-7535481a1/" title="W3.CSS" target="_blank"
+        class="w3-hover-text-green">Justine Ambrad</a><br>
+      © Coppyright 2021, All Rights Reserved
+    </p>
+  </footer>
+  
+  <script src="../src/javascript/main.js"></script>
+
+</body>
+
+</html>
